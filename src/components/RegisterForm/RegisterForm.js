@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Grid, makeStyles } from '@material-ui/core'
 
 import { useForm, Form } from './../useForm/useForm'
@@ -37,7 +38,7 @@ const initialFValues = {
 const RegisterForm = () => {
 
     const classes = useStyles();
-
+    const history = useHistory();
     const { userData, setUserData } = useContext(UserLoginContext)
 
     const { registerState, setRegisterState } = useState({
@@ -81,6 +82,7 @@ const RegisterForm = () => {
         if(validate()){
             const userData = await callRegisterAPI(values.name, values.username, values.email, values.password)
             setUserData(userData);
+            history.push('/edit/changeProfilePicture')
         }
     }
 

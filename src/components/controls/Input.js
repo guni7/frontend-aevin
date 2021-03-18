@@ -11,6 +11,7 @@ const Input = (props) => {
             value={value}
             onChange={onChange}
             type={type}
+            fullWidth
             {...(error && {error: true, helperText: error})}
         />
     )

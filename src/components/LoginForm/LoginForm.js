@@ -26,6 +26,7 @@ const useStyles = makeStyles( theme => ({
     },
     register: {
         color: theme.palette.secondary.main,
+        cursor: 'pointer'
     }
 }))
 
