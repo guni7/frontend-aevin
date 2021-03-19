@@ -25,7 +25,7 @@ const AddProfilePicturePage = () => {
     return(
         <div>
             <div className={classes.picture}>
-                <ChangePictureNew isNew=true />
+                <ChangePictureNew isNew={true} />
             </div>
             <div>
                 <Typography className={classes.text}>
