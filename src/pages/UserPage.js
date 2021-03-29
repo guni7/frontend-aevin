@@ -8,6 +8,7 @@ import NewPost from './../components/NewPost/NewPost'
 import BottomBar from './../components/BottomBar/BottomBar'
 import LinksContainer from './../components/Links/LinksContainer'
 import EditUserData from './../components/EditUserData/EditUserData'
+import YoutubeList from './../components/YoutubeList/YoutubeList'
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -38,7 +39,7 @@ const UserPage = () => {
                     </>
                 )
             case 1:
-                return <PostFeed />
+                return <YoutubeList />
             case 2:
                 return <EditUserData />
             default:

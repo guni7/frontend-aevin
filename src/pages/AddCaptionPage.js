@@ -1,5 +1,6 @@
-import { useEffect, useContext, useState } from 'react'
+//#add content[0] property when you create a post
 import { useLocation, useHistory } from 'react-router-dom'
+import { useEffect, useContext, useState } from 'react'
 
 import UserLoginContext from './../context/UserLoginContext'
 
@@ -82,17 +83,18 @@ const AddCaptionPage = () => {
         const createPostData = JSON.stringify(editData)
         const res = await callPostAPI( file, createPostData, token)
         if(res){
+            console.log(res.data)
 
             let { user } = userData
             let { posts } = user
 
-            setUserData({
-                ...userData,
-                user: {
-                        ...user,
-                        posts: [res.data, ...posts]
-                    }
-            })
+            //setUserData({
+            //    ...userData,
+            //    user: {
+            //            ...user,
+            //            posts: [res.data, ...posts]
+            //        }
+            //})
             history.push('/')
         }
     }

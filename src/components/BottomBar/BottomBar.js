@@ -1,6 +1,7 @@
 import React from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import { Home, VideoLibrary, AccountCircle} from '@material-ui/icons';
+import { Home, AccountCircle} from '@material-ui/icons';
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import { makeStyles } from '@material-ui/core/styles'
 
 
@@ -9,7 +10,7 @@ const BotNav = ({value, onChange}) => {
     return(
         <BottomNavigation className={classes.botnav} value={value} onChange={(e, tab) => onChange(tab)}>
             <BottomNavigationAction className={classes.icons} icon={<Home/>} />
-            <BottomNavigationAction className={classes.icons} icon={<VideoLibrary/>} />
+            <BottomNavigationAction className={classes.icons} icon={<PlayCircleFilledIcon/>} />
             <BottomNavigationAction className={classes.icons} icon={<AccountCircle/>} />
         </BottomNavigation>
     )

@@ -16,8 +16,9 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         maxWidth: '650px'
     }
-
 }));
+
+
 const PostExpandPage = () => {
 
     const classes = useStyles();
@@ -30,6 +31,7 @@ const PostExpandPage = () => {
         console.log('going back');
     }
 
+    console.log(post)
     return(
         <div className={classes.root}>
             <TopBarBackButton />

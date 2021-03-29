@@ -34,7 +34,6 @@ const useStyles = makeStyles(theme => ({
     },
     formButton:{
         padding:theme.spacing(2),
-        marginBottom: '50px'
     }
 }))
 

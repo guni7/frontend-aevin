@@ -1,3 +1,5 @@
+//#add content[0] property when you create a post
+
 import React, { useState, useEffect,  useContext }from 'react';
 import { useHistory } from 'react-router-dom'
 
@@ -78,7 +80,7 @@ const PostComponentAuthenticated = ({ post, onClick }) => {
 
     let viewerUsername
 
-    if(viewer){
+    if(viewerData.isLoggedIn){
         viewerUsername = viewer.username
     }
 
@@ -114,7 +116,6 @@ const PostComponentAuthenticated = ({ post, onClick }) => {
                 </div>
                 <CardActions className={classes.interactionsContainer}>
                     <IconButton className={classes.interactions}>
-
                         {
                             viewerUsername ? (
                                 <LikeButton likes={post.likes} postId={post.id} username={userData.user.username}/>

@@ -4,12 +4,10 @@ import UserLoginContext from './../../context/UserLoginContext'
 import ViewerLoginContext from './../../context/ViewerLoginContext'
 import AuthenticatedPost from './../Post/AuthenticatedPost'
 
-const PostFeed = ({ profilePicture, username, name }) => {
+const PostFeedUser = ({ profilePicture, username, name }) => {
     const classes= useStyles()
 
     const { userData, setUserData } = useContext(UserLoginContext)
-
-    const { viewerData, setViewerData } = useContext(ViewerLoginContext)
 
     const posts = userData.user.posts
 
@@ -17,7 +15,8 @@ const PostFeed = ({ profilePicture, username, name }) => {
     return(
         <div className={classes.root}>
             {
-                viewerData.viewer ? ( <div>
+                userData.user.token ? (
+                    <div>
                         {
 
                             posts ? (
@@ -39,6 +38,7 @@ const PostFeed = ({ profilePicture, username, name }) => {
         </div>
     )
 }
+
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
@@ -48,4 +48,4 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: '45px'
     }
 }))
-export default PostFeed;
+export default PostFeedUser;

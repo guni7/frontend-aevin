@@ -9,6 +9,8 @@ import TopBar from './../components/TopBar/TopBar'
 import LinksContainer from './../components/Links/LinksContainer'
 import BottomBar from './../components/BottomBar/BottomBar'
 import PostFeed from './../components/PostFeed/PostFeed'
+import ViewerProfile from './../components/ViewerProfile/ViewerProfile'
+import YoutubeList from './../components/YoutubeList/YoutubeList'
 
 import { serverURL } from './../global'
 
@@ -53,9 +55,9 @@ const ViewerPage = () => {
                     </>
                 )
             case 1:
-                return <PostFeed />
+                return <YoutubeList />
             case 2:
-                return <PostFeed />
+                return <ViewerProfile />
             default:
                 return new Error('This does not exist');
         }

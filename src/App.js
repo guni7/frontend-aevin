@@ -85,7 +85,6 @@ const App = () => {
         checkLoggedIn()
     }, [])
 
-
     const classes = useStyles();
     return (
         <div>

@@ -123,6 +123,15 @@ const EditUserData = () => {
         }
     }
 
+    const handleLogout = () => {
+        localStorage.setItem('auth-token', '')
+        setUserData({
+            token: null,
+            user: null,
+            loginSuccess: null
+        })
+    }
+
     const handleTest = () => {
         history.push('/edit/changeProfilePicture')
     }
@@ -165,6 +174,19 @@ const EditUserData = () => {
                 />
             </div>
             <EditLinkData />
+            <div className={classes.formButton}>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    type="submit"
+                    text="LOGOUT"
+                    onClick={handleLogout}
+                />
+            </div>
+            <br />
+            <br />
+            <br />
         </div>
 
     )
